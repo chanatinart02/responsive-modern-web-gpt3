@@ -3,6 +3,27 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../assets/logo.svg";
 import "./navbar.css";
 
+// create Menu link to component
+const Menu = () => (
+  <>
+    <p>
+      <a href="#">Home</a>
+    </p>
+    <p>
+      <a href="#">What is GPT3</a>
+    </p>
+    <p>
+      <a href="#">Open AI</a>
+    </p>
+    <p>
+      <a href="#">Case Studies</a>
+    </p>
+    <p>
+      <a href="#">Library</a>
+    </p>
+  </>
+);
+
 function Navbar() {
   const [toggleMenu, setToggleMenu] = useState(false);
   return (
@@ -12,21 +33,7 @@ function Navbar() {
           <img src={logo} alt="logo" />
         </div>
         <div className="gpt3__navbar-links_container">
-          <p>
-            <a href="#">Home</a>
-          </p>
-          <p>
-            <a href="#">What is GPT3</a>
-          </p>
-          <p>
-            <a href="#">Open AI</a>
-          </p>
-          <p>
-            <a href="#">Case Studies</a>
-          </p>
-          <p>
-            <a href="#">Library</a>
-          </p>
+          <Menu />
         </div>
       </div>
       <div className="gpt3__navbar-sign">
@@ -46,6 +53,18 @@ function Navbar() {
             size={27}
             onClick={() => setToggleMenu(true)}
           />
+        )}
+        {/* support for mobile menu */}
+        {toggleMenu && (
+          <div className="gpt3__navbar-menu_container scale-up center">
+            <div className="gpt3__navbar-menu_container-links">
+              <Menu />
+            </div>
+            <div className="gpt3__navbar-menu_container-links-sign">
+              <p>Sign in</p>
+              <button>Sign up</button>
+            </div>
+          </div>
         )}
       </div>
     </div>
