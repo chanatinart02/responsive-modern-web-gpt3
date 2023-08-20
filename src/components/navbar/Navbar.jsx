@@ -6,20 +6,21 @@ import "./navbar.css";
 // create Menu link to component
 const Menu = () => (
   <>
+    {/* link with ID */}
     <p>
-      <a href="#">Home</a>
+      <a href="#home">Home</a>
     </p>
     <p>
-      <a href="#">What is GPT3</a>
+      <a href="#wgpt3">What is GPT3</a>
     </p>
     <p>
-      <a href="#">Open AI</a>
+      <a href="#possibility">Open AI</a>
     </p>
     <p>
-      <a href="#">Case Studies</a>
+      <a href="#features">Case Studies</a>
     </p>
     <p>
-      <a href="#">Library</a>
+      <a href="#blog">Library</a>
     </p>
   </>
 );
